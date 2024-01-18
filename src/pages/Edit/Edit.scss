@@ -1,0 +1,80 @@
+.edit {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: white;
+  padding: 1rem;
+
+  textarea {
+      border: none;
+      resize: none;
+      flex-grow: 10000;
+      margin-bottom: 1rem;
+      &:focus-visible {
+          outline: none;
+      }
+  }
+  
+  .name-input, h1 {
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      border-bottom: 1px solid #ddd;
+      &:focus-visible {
+          outline: none;
+      }
+  }
+
+  button {
+    padding: 1.5rem;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 1rem;
+
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .loading {
+        display: inline;
+        margin-left: 1rem;
+        animation: spin 2s ease-in-out infinite;
+    }
+    &.hide .loading {
+        display: none;
+    }
+
+    .resultIndicator {
+        display: inline;
+    }
+    &.success {
+        background-color: rgba(0, 255, 0, 0.3) !important;
+        border-color: rgba(0, 255, 0, 0.3) !important;
+    }
+    &.failure {
+        background-color: rgba(255, 0, 0, 0.3) !important;
+        border-color: rgba(255, 0, 0, 0.3) !important;
+    }
+  }
+
+
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(-45deg)
+  }
+  to {
+      transform: rotate(315deg)
+  }
+}
