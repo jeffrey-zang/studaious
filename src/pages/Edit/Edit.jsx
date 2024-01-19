@@ -17,7 +17,7 @@ const Edit = () => {
       <div className="edit w-1/3 border-r-[1px] border-r-[#ddd]">
         <h1>
           Your Note
-          <p className='font-normal text-neutral-500 text-sm'>Ideally, use a paragraph at least 800 characters long</p>
+          <p className='font-normal text-neutral-500 text-sm'>Use a paragraph at least 800 characters long.</p>
         </h1>
         <textarea
           value={text}
@@ -57,7 +57,7 @@ const Edit = () => {
       <div className="edit w-2/3">
         <h1>
           Practice Questions
-          <p className='font-normal text-neutral-500 text-sm'>Click to reveal</p>
+          <p className='font-normal text-neutral-500 text-sm'>Historical facts and definitions work best. Click to reveal.</p>
         </h1>
         <div className='gap-4 flex flex-col overflow-y-scroll overflow-x-hidden'>
           {generated.map(
