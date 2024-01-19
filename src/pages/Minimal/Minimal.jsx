@@ -1,9 +1,10 @@
-import "./Edit.scss";
+import "../Edit/Edit.scss";
 import { useState } from "react";
-import { Skeleton } from 'antd';
 import { generate } from "../../utils/cohere";
+import { Skeleton } from 'antd';
+import { Oval } from 'react-loader-spinner'
 
-const Edit = () => {
+const Minimal = () => {
 
   const [text, setText] = useState("");
 
@@ -18,7 +19,7 @@ const Edit = () => {
       <div className="edit w-1/3 border-r-[1px] border-r-[#ddd]">
         <h1>
           Your Note
-          <p className='font-normal text-neutral-500 text-sm'>Use a paragraph at least 800 characters long.</p>
+          {/* <p className='font-normal text-neutral-500 text-sm'>Ideally, use a paragraph at least 800 characters long</p> */}
         </h1>
         <textarea
           value={text}
@@ -26,14 +27,27 @@ const Edit = () => {
           autoFocus
           placeholder="Type something..."
         />
-        <p className='text-neutral-500 text-sm'>{text.length}c</p>
+        {/* <p className='text-neutral-500 text-sm'>{text.length}c</p> */}
         <button 
           className={`bg-blue-200 mr-12 border-[1px] border-blue-300 ${loading ? "show no" : "hide"} ${success ? "success" : success == false ? "failure" : ""}`}
           onClick={
             async () => {
               if (!loading && text.length >= 800) {
                 setLoading(true);
-                setLoadingMsg("Generating...");
+                setGenerated([]);
+                setLoadingMsg(
+                  (
+                    <div className='flex items-center gap-8'>
+                      <Oval 
+                        height='40'
+                        width='40'
+                        color='#000000'
+                        secondaryColor="#555555"
+                      />
+                      Generating...
+                    </div>
+                  )
+                );
                 setSuccess(null);
                 try {
                   const output = await generate(text);
@@ -52,13 +66,13 @@ const Edit = () => {
           }
           disabled={loading || text.length < 800}
         >
-          {(text.length >= 800) ? loadingMsg : "Too short!"}
+          {loadingMsg}
         </button>
       </div>
       <div className="edit w-2/3">
         <h1>
           Practice Questions
-          <p className='font-normal text-neutral-500 text-sm'>Historical facts and definitions work best. Click to reveal.</p>
+          {/* <p className='font-normal text-neutral-500 text-sm'>Click to reveal</p> */}
         </h1>
         <div className='gap-4 flex flex-col overflow-y-scroll overflow-x-hidden'>
           {(generated.length == 0 || loading) ? 
@@ -92,4 +106,4 @@ const Edit = () => {
   );
 };
 
-export default Edit;
+export default Minimal;
