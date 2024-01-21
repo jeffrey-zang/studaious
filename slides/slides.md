@@ -4,6 +4,7 @@ theme: apple-basic
 
 ---
 layout: intro
+transition: slide-left
 ---
 
 # We've all been there.
@@ -11,6 +12,7 @@ Day before a big test.
 
 ---
 layout: intro
+transition: slide-left
 ---
 
 # You need something, FAST.
@@ -18,6 +20,7 @@ layout: intro
 ---
 layout: intro-image-right
 image: './University.png'
+transition: slide-left
 ---
 
 # studAIous
@@ -31,6 +34,7 @@ image: './University.png'
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Overview
@@ -40,6 +44,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Objectives
@@ -54,6 +59,7 @@ layout: bullets
 
 ---
 layout: statement
+transition: slide-left
 ---
 
 # In Summary
@@ -61,6 +67,7 @@ studAIous aims to **turn a profit** by providing a web app to **boost learning**
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Key Personnel
@@ -72,6 +79,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Competitive Advantage
@@ -84,6 +92,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
  
 # Market Share
@@ -93,6 +102,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Target Market
@@ -105,6 +115,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Enterprise
@@ -115,6 +126,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Target Market Description
@@ -124,6 +136,7 @@ layout: bullets
 
 ---
 layout: bullets
+transition: slide-left
 ---
 
 # Financial Success
@@ -134,12 +147,22 @@ layout: bullets
 
 ---
 layout: statement
+transition: slide-left
 ---
 
 # One More Thing...
 
 ---
 layout: statement
+transition: slide-left
+---
+
+Don't believe me? Try it yourself!
+# studaious.vercel.app
+
+---
+layout: statement
+transition: slide-left
 ---
 
 # The choice is Yours
