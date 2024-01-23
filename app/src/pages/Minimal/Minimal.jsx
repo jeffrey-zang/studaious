@@ -6,7 +6,7 @@ import { Oval } from 'react-loader-spinner'
 
 const Minimal = () => {
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState("Venture capital (VC) is a form of private equity financing that is provided by firms or funds to startup, early-stage, and emerging companies that have been deemed to have high growth potential or which have demonstrated high growth (in terms of number of employees, annual revenue, scale of operations, etc.). Venture capital firms or funds invest in these early-stage companies in exchange for equity, or an ownership stake. Venture capitalists take on the risk of financing risky start-ups in the hopes that some of the companies they support will become successful. Because startups face high uncertainty, VC investments have high rates of failure. The start-ups are usually based on an innovative technology or business model and they are usually from high technology industries, such as information technology (IT), clean technology or biotechnology.");
 
   const [success, setSuccess] = useState(null);
   const [loading, setLoading] = useState(false);

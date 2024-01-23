@@ -14,8 +14,8 @@ const Edit = () => {
   const [generated, setGenerated] = useState([]);
 
   return (
-    <div className='flex items-center px-8 pb-8 bg-white'>
-      <div className="edit w-1/3 border-r-[1px] border-r-[#ddd]">
+    <div className='flex items-center px-8 pb-8 bg-white flex-col md:flex-row'>
+      <div className="edit w-full md:w-1/3 border-r-[1px] border-r-[#ddd]">
         <h1>
           Your Note
           <p className='font-normal text-neutral-500 text-sm'>Use a paragraph at least 800 characters long.</p>
@@ -55,7 +55,7 @@ const Edit = () => {
           {(text.length >= 800) ? loadingMsg : "Too short!"}
         </button>
       </div>
-      <div className="edit w-2/3">
+      <div className="edit w-full md:w-2/3">
         <h1>
           Practice Questions
           <p className='font-normal text-neutral-500 text-sm'>Historical facts and definitions work best. Click to reveal.</p>
