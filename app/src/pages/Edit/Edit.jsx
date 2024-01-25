@@ -14,7 +14,7 @@ const Edit = () => {
   const [generated, setGenerated] = useState([]);
 
   return (
-    <div className='flex items-center px-8 pb-8 bg-white flex-col md:flex-row'>
+    <div className='flex items-center px-0 md:px-8 pb-8 bg-white flex-col md:flex-row'>
       <div className="edit w-full md:w-1/3 border-r-[1px] border-r-[#ddd]">
         <h1>
           Your Note
