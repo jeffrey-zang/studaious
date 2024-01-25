@@ -165,4 +165,12 @@ layout: statement
 transition: slide-left
 ---
 
+I'm asking for
+# $50,000 for 22.5%
+
+---
+layout: statement
+transition: slide-left
+---
+
 # The choice is Yours
